@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - LAETY FURNITURE WORKSHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-categories {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .category-btn.active,
+        .category-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: start;
+        }
+        
+        .product-features {
+            margin: 2rem 0;
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <h2>LAETY FURNITURE</h2>
+            <span>WORKSHOP</span>
+        </div>
+        <ul class="nav-menu" style="display: flex;">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <section class="hero" style="min-height: 40vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; color: white;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Products</h1>
+                <p>Discover our collection of handcrafted furniture</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" style="padding: 80px 0;">
+        <div class="container">
+            <div class="product-categories">
+                <div class="category-filter">
+                    <button class="category-btn active" data-filter="all">All Products</button>
+                    <button class="category-btn" data-filter="dining">Dining</button>
+                    <button class="category-btn" data-filter="living">Living Room</button>
+                    <button class="category-btn" data-filter="bedroom">Bedroom</button>
+                    <button class="category-btn" data-filter="office">Office</button>
+                    <button class="category-btn" data-filter="custom">Custom</button>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Dining Products -->
+                <div class="product-card" data-category="dining">
+                    <div class="product-image">
+                         <img src="dinning.jpg" alt="dinning image" width="435px"  height="350px"/></br>
+                    </div>
+                    <div class="product-info">
+                        <h3>Farmhouse Dining Table</h3>
+                        <p>Solid oak table with traditional joinery</p>
+                        <span class="price">$1,299</span>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Inquire</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="living">
+                    <div class="product-image">
+ <img src="boks.jpg" alt="boks image" width="435px"  height="350px"/></br>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wall-Mounted Bookshelf</h3>
+                        <p>Floating shelves with hidden brackets</p>
+                        <span class="price">$650</span>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Inquire</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bedroom">
+                    <div class="product-image">
+ <img src="bed.jpg" alt="bed image" width="435px"  height="350px"/></br>
+                    </div>
+                    <div class="product-info">
+                        <h3>Platform Bed Frame</h3>
+                        <p>Queen size with built-in storage</p>
+                        <span class="price">$1,899</span>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" style="background: var(--background);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Custom Orders</h2>
+                <p>Have something specific in mind? We love custom projects!</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Bespoke Furniture Design</h3>
+                    <p>We specialize in creating custom pieces tailored to your specific needs, space, and style preferences. From unique dimensions to special finishes, we'll work with you to bring your vision to life.</p>
+                    <div class="product-features">
+                        <h4>Our Custom Process:</h4>
+                        <ul class="feature-list">
+                            <li>Free initial consultation</li>
+                            <li>Detailed design proposals</li>
+                            <li>Material selection guidance</li>
+                            <li>Regular progress updates</li>
+                            <li>Professional installation</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                </div>
+                <div class="about-image">
+ <img src="cust.jpg" alt="cust image" width="435px"  height="350px"/></br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+<script>
+// Basic mobile navigation
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+
+    
+</body>
+</html>
